@@ -1,21 +1,3 @@
-# animated-happiness
-
-### Required Environment Variables
-
-To be able to start the server, the following environment variables need to be provided in a file named .env in the root directory.
-
-```javascript
-COOKIE_SECRET='your_secret_key'
-PORT=3000
-POSTGRES_URI='your_postgre_uri'
-REDIS_URI='your_redis_uri'
-```
-
-### Database
-
-Create the database, create a necessary tables and procedure using this script.
-
-```sql
 CREATE TABLE users (
     id VARCHAR(32) PRIMARY KEY,
     email VARCHAR(100) UNIQUE NOT NULL,
@@ -70,18 +52,3 @@ EXCEPTION
         RAISE;
 END;
 $$ LANGUAGE plpgsql;
-```
-
-### Dependencies
-
-Install the required Node.js-dependencies.
-
-```
-npm install
-```
-
-
-### Start application in dev mode
-```
-npm run dev
-```
